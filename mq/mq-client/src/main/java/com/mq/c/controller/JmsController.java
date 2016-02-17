@@ -23,6 +23,13 @@ public class JmsController {
 	@Autowired
 	JmsSender jmsSender;
 	
+	/**
+	 * String
+	 * @param request
+	 * @param response
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping("sendString.do")
 	public String sendString(HttpServletRequest request, HttpServletResponse response, Model model) {
 		List<String> list = new ArrayList<String>();
@@ -34,6 +41,13 @@ public class JmsController {
 		return "index";
 	}
 	
+	/**
+	 * map
+	 * @param request
+	 * @param response
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping("sendMap.do")
 	public String sendMap(HttpServletRequest request, HttpServletResponse response, Model model) {
 		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
@@ -47,6 +61,13 @@ public class JmsController {
 		return "index";
 	}
 	
+	/**
+	 * 对象
+	 * @param request
+	 * @param response
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping("sendObject.do")
 	public String sendObject(HttpServletRequest request, HttpServletResponse response, Model model) {
 		List<MyMessage> list = new ArrayList<MyMessage>();
